@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-docker",
+  "name": "safe-spots",
   "version": "1.0.0",
   "description": "Node - Next.js - Next - React - SSR - Docker",
   "author": "Regis Boudinot (selfup)",
@@ -7,11 +7,21 @@
     "preinstall": "npx next telemetry disable",
     "dev": "next",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "dependencies": {
     "next": "^9.3.6",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "@material-ui/core": "latest",
+    "clsx": "latest",
+    "prop-types": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "latest",
+    "typescript": "^3.9.5"
   }
 }
